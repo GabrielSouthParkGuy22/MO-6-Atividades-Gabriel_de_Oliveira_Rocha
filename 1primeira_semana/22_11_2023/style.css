@@ -5,9 +5,24 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#user-form {
-  padding: 1rem;
+#root {
   background-color: #404258;
+}
+
+#header {
+  padding: 1rem 2rem;
+  background-color: #69266a;
+}
+
+#registerTitle {
+  padding: 1rem 2rem;
+  background-color: #262835;
+  color: #ffffff;
+}
+
+#user-form {
+  margin: 4rem 0rem;
+  padding: 1rem;
 }
 
 #userDataContainer {
@@ -80,6 +95,59 @@
   cursor: pointer;
 }
 
+#newsletter {
+  background-color: #69266a;
+  padding: 2rem;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+#newsletter p {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+#newsletter-input {
+  background-color: #efb8f0;
+  color: #34095f;
+  border: 2px solid transparent;
+  border-radius: 0.2rem 0rem 0rem 0.2rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+#newsletter-input:focus {
+  border-color: #ac4fc4;
+}
+
+#subscribe-btn {
+  border: none;
+  background-color: #190027;
+  padding: 0.625rem;
+  font-size: 1.2rem;
+  color: #ffffff;
+  border-radius: 0rem 0.2rem 0.2rem 0rem;
+  cursor: pointer;
+}
+
+#contact-container {
+  padding: 2rem;
+  background-color: #1f202b;
+}
+
+#contact-container h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+#contact-container p {
+  color: #bbbbbb;
+}
+
 @media (max-width: 800px) {
   #form-container {
     grid-template-columns: 1fr;
@@ -91,7 +159,20 @@
   }
 }
 
+@media (max-width: 494px) {
+  #newsletter-input,
+  #subscribe-btn {
+    border-radius: 0rem;
+    width: 100%;
+  }
+}
+
 @media (max-width: 400px) {
+  #registerTitle,
+  #header {
+    padding: 1rem;
+  }
+
   #user-form {
     padding: 2rem 0.5rem;
   }
@@ -111,5 +192,17 @@
 
   #userData {
     font-size: 1.5rem;
+  }
+
+  #newsletter {
+    padding: 1rem;
+  }
+
+  #contact-container {
+    padding: 1rem;
+  }
+
+  #contact-container p {
+    font-size: 0.825rem;
   }
 }

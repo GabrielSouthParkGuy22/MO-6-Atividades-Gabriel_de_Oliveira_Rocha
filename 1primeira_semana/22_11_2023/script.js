@@ -1,5 +1,23 @@
 const root_container = document.querySelector("#root");
 
+function Header() {
+  return (
+    <header id="header">
+      <a href="#">
+        <img src="./Vector.svg" alt="logo" />
+      </a>
+    </header>
+  );
+}
+
+function RegisterHeader() {
+  return (
+    <div id="registerHeader">
+      <h1 id="registerTitle">Cadastro</h1>
+    </div>
+  );
+}
+
 function UserForm() {
   return (
     <form action="" id="user-form">
@@ -93,4 +111,37 @@ function UserForm() {
   );
 }
 
-ReactDOM.render(<UserForm />, root_container);
+function Footer() {
+  return (
+    <footer>
+      <div id="newsletter">
+        <p>Receba notificações pelo Newsletter</p>
+
+        <div>
+          <input
+            type="text"
+            id="newsletter-input"
+            name="newsletter-input"
+          ></input>
+          <button id="subscribe-btn">SE-INSCREVER</button>
+        </div>
+      </div>
+
+      <div id="contact-container">
+        <h3>Contatos:</h3>
+        <p>tel: 11 99999-9999</p>
+        <p>undergroundmusicofficial@gmail.com</p>
+      </div>
+    </footer>
+  );
+}
+
+ReactDOM.render(
+  <div>
+    <Header />
+    <RegisterHeader />
+    <UserForm />
+    <Footer />
+  </div>,
+  root_container
+);
